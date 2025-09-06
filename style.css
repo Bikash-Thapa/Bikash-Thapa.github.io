@@ -1,0 +1,414 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #1C1C1C;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Sticky topbar that holds header + nav */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1C1C1C;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.1);
+}
+
+/* Header section */
+header {
+  background: transparent;
+  margin: auto;
+  padding: 2rem 0;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+/* New container for header content to match width */
+.header-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+header .profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0f0;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+header p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.socials {
+  margin-top: 1rem;
+}
+
+.socials a {
+  margin-right: 1.5rem;
+  font-size: 1.8rem;
+  color: #0f0;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #0c0;
+  transform: scale(1.2);
+}
+
+/* Navbar full-width background */
+nav {
+  width: 100%;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  transition: all 0.3s ease;
+  background: #1C1C1C;
+  box-shadow: none;
+}
+
+/* Center nav links and distribute equally */
+.nav-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav a:hover {
+  color: #0f0;
+  background: #222;
+}
+
+/* New active class for the nav highlight */
+nav a.active {
+  color: #0f0;
+  background: #333;
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0, 255, 0, 0.2);
+}
+
+/* Navbar when scrolled */
+.scrolled {
+  background: #111;
+  box-shadow: 0 4px 6px rgba(0, 255, 0, 0.15);
+}
+
+/* Content sections */
+section {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #252525;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.08);
+  scroll-margin-top: 250px;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: #0f0;
+  border-bottom: 2px solid #0f0;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #1C1C1C;
+  margin-top: 3rem;
+  border-top: 1px solid #0f0;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Floating Back to Top button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #0f0;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.4);
+  text-decoration: none;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s, transform 0.2s, opacity 0.3s;
+  z-index: 2000;
+}
+
+.back-to-top:hover {
+  background: #0c0;
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* CV section link styling */
+#cv a {
+  color: #0f0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+#cv a:hover {
+  color: #0c0;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .header-container, 
+  .nav-container {
+    padding: 0 1.5rem;
+  }
+  
+  section {
+    padding: 2.5rem 1.5rem;
+    margin: 1.5rem auto;
+  }
+}
+
+/* Mobile and small tablet styles */
+@media (max-width: 768px) {
+  .header-container, 
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  header {
+    padding: 1.5rem 0;
+  }
+
+  header .profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  header img {
+    width: 120px;
+    height: 120px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .socials {
+    margin-top: 0.5rem;
+  }
+
+  .socials a {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+
+  /* Mobile navigation */
+  nav {
+    padding: 0.75rem 0;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin: 0;
+    flex-grow: 0;
+    display: block;
+  }
+
+  /* Adjust section scroll offset for mobile */
+  section {
+    scroll-margin-top: 320px;
+    padding: 2rem 1rem;
+    margin: 1rem auto;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Back to top button - smaller on mobile */
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .header-container, 
+  .nav-container {
+    padding: 0 0.75rem;
+  }
+
+  header img {
+    width: 100px;
+    height: 100px;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .socials a {
+    margin-right: 0.75rem;
+    font-size: 1.3rem;
+  }
+
+  section {
+    scroll-margin-top: 300px;
+    padding: 1.5rem 0.75rem;
+    margin: 0.75rem auto;
+    border-radius: 8px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Smaller back to top on very small screens */
+  .back-to-top {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  /* Adjust font sizes for better readability */
+  body {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  ul li {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.8rem;
+  }
+
+  .socials a {
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 1.25rem 0.5rem;
+    margin: 0.5rem auto;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 896px) and (orientation: landscape) {
+  header {
+    padding: 1rem 0;
+  }
+
+  header .profile {
+    flex-direction: row;
+    text-align: left;
+    gap: 1.5rem;
+  }
+
+  header img {
+    width: 80px;
+    height: 80px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  nav a {
+    padding: 0.5rem 0.75rem;
+    flex-grow: 1;
+    min-width: auto;
+  }
+
+  section {
+    scroll-margin-top: 180px;
+    padding: 1.5rem 1rem;
+  }
+}
