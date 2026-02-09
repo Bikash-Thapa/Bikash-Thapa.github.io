@@ -6,6 +6,7 @@ redirect_from:
   - /about/
   - /about.html
   - /~cs_bthap004
+  - /~cs_bthap004/ 
 ---
 
 - Hi! I'm Bikash Thapa, and I am currently a PhD student at Old Dominion University (ODU) majoring in Computer Science.
